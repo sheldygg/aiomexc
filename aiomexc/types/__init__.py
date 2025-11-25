@@ -3,6 +3,7 @@ from .account import AccountInformation, Balance
 from .order import Order, CreatedOrder, CanceledOrder
 from .ticker import TickerPrice
 from .user_data_stream import ListenKey, ListenKeys
+from .uid import UID
 
 __all__ = [
     "MexcResult",
@@ -15,4 +16,5 @@ __all__ = [
     "TickerPrice",
     "ListenKey",
     "ListenKeys",
+    "UID",
 ]

@@ -8,6 +8,7 @@ from .user_data_stream import (
     ExtendListenKey,
     DeleteListenKey,
 )
+from .uid import GetUID
 
 __all__ = [
     "GetAccountInformation",
@@ -21,4 +22,5 @@ __all__ = [
     "GetListenKeys",
     "ExtendListenKey",
     "DeleteListenKey",
+    "GetUID",
 ]

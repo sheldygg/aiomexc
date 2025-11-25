@@ -12,6 +12,7 @@ from aiomexc.methods import (
     GetOpenOrders,
     CreateOrder,
     CancelOrder,
+    GetUID,
 )
 from aiomexc.enums import OrderSide, OrderType
 from aiomexc.types import (
@@ -23,6 +24,7 @@ from aiomexc.types import (
     ListenKeys,
     CreatedOrder,
     CanceledOrder,
+    UID,
 )
 
 from .session.base import BaseSession, Credentials
@@ -166,3 +168,8 @@ class MexcClient:
             credentials=credentials,
             timeout=timeout,
         )
+
+    async def get_uid(
+        self, credentials: Credentials | None = None, timeout: float | None = None
+    ) -> UID:
+        return await self(GetUID(), credentials=credentials, timeout=timeout)
